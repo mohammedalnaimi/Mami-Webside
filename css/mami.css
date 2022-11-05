@@ -139,11 +139,6 @@ a {
   content: "\f077";
   font-size: 20px;
 }
-/* @media (max-width: 991px) {
-  .scroll-to-top.show {
-    display: none;
-  }
-} */
 /* End Global Rules */
 /* Start Header */
 .header {
@@ -375,7 +370,7 @@ a {
   animation: up-and-down 5s linear infinite;
 }
 @media (max-width: 991px) {
-  .landing::before  {
+  .landing::before {
     background: url(../imgs/istockphoto-1129847499-170667a.jpg);
     opacity: 0.3;
     background-size: cover;
