@@ -30,7 +30,7 @@ window.onscroll = function () {
     started = true
   }
   // Scroll To Top Add Class Name
-  if (this.scrollY >= 500) {
+  if (this.scrollY >= 600) {
     scrollToTop.classList.add("show");
   } else {
     scrollToTop.classList.remove("show");

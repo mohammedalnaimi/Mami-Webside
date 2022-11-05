@@ -124,6 +124,11 @@ a {
   cursor: pointer;
   transition: var(--main-transition);
 }
+@media (max-width: 767px) {
+  .scroll-to-top.show {
+  opacity: 0.4;
+  }
+}
 .scroll-to-top:hover {
   opacity: 0.5;
 }
