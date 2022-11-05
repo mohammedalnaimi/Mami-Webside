@@ -129,8 +129,10 @@ a {
     opacity: 0.4;
   }
 }
-.scroll-to-top:hover {
-  opacity: 0.5;
+@media (min-width: 992px) {
+  .scroll-to-top:hover {
+    opacity: 0.5;
+  }
 }
 .scroll-to-top::before {
   font-family: "FontAwesome";
