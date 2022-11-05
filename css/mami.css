@@ -102,7 +102,7 @@ a {
 }
 .scroll-to-top {
   position: fixed;
-  background-color: #181C23;
+  background-color: #181c23;
   color: white;
   bottom: 16px;
   right: 15px;
@@ -126,7 +126,7 @@ a {
 }
 @media (max-width: 767px) {
   .scroll-to-top.show {
-  opacity: 0.4;
+    opacity: 0.4;
   }
 }
 .scroll-to-top:hover {
