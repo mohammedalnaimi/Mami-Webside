@@ -373,6 +373,14 @@ a {
   animation: up-and-down 5s linear infinite;
 }
 @media (max-width: 991px) {
+  .landing::before  {
+    background: url(../imgs/istockphoto-1129847499-170667a.jpg);
+    opacity: 0.3;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
   .landing .image {
     display: none;
   }
