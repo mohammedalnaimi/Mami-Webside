@@ -101,60 +101,42 @@ a {
   left: 0;
 }
 .scroll-to-top {
-  display: none;
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: var(--main-color);
+  background-color: #181C23;
   color: white;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 6px 9px;
-  font-family: Arial, Tahoma;
-  cursor: pointer;
-  animation: scrollToTop 0.5s ease;
+  bottom: 16px;
+  right: 15px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--main-transition);
   z-index: 9999;
 }
-@keyframes scrollToTop {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .scroll-to-top.show {
-  display: block;
-  right: 25px;
-  animation: scrollToTopShow 0.5s ease;
-}
-@keyframes scrollToTopShow {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  opacity: 0.35;
+  bottom: 50px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: var(--main-transition);
 }
 .scroll-to-top:hover {
-  background-color: var(--main-color-alt);
+  opacity: 0.5;
 }
 .scroll-to-top::before {
   font-family: "FontAwesome";
   content: "\f077";
   font-size: 20px;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .scroll-to-top.show {
     display: none;
   }
-}
+} */
 /* End Global Rules */
 /* Start Header */
 .header {
