@@ -6,6 +6,7 @@ let eventImage = document.querySelector(".events .image");
 let statsSection = document.querySelector(".stats");
 let statsSectionNums = document.querySelectorAll(".stats .box .number");
 let started = false;
+let topScroll = document.querySelector(".top-scroll")
 
 function startCount(el) {
   let goal = el.dataset.goal;
@@ -75,3 +76,19 @@ let counter = setInterval(() => {
     newYear.appendChild(paragrafText);
   }
 }, 1000);
+
+// Creat Top Scroll
+// let el = document.documentElement.scrollHeight
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+// console.log(document.documentElement.scrollHeight)
+// console.log(document.documentElement.clientHeight)
+// console.log(height)
+
+window.addEventListener("scroll", () => {
+  const a = document.documentElement.scrollTop
+  topScroll.style.width = `${(a / height) * 100}%`
+  if (innerWidth < 768) {
+    topScroll.style.width = `${(a / height) * 100}%`
+  }
+});
