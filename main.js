@@ -8,6 +8,15 @@ let statsSectionNums = document.querySelectorAll(".stats .box .number");
 let started = false;
 let topScroll = document.querySelector(".top-scroll")
 
+// Creat Top Scroll
+// let el = document.documentElement.scrollHeight
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+window.addEventListener("scroll", () => {
+  const a = document.documentElement.scrollTop; 
+  topScroll.style.width = `${(a / height) * 90}%`;
+});
+
 function startCount(el) {
   let goal = el.dataset.goal;
   let counter = setInterval(() => {
@@ -59,14 +68,14 @@ let counter = setInterval(() => {
   let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
-
+  
   document.querySelector(".days").innerHTML = days < 10 ? `0${days}` : days;
   document.querySelector(".hours").innerHTML = hours < 10 ? `0${hours}` : hours;
   document.querySelector(".minutes").innerHTML =
-    minutes < 10 ? `0${minutes}` : minutes;
+  minutes < 10 ? `0${minutes}` : minutes;
   document.querySelector(".seconds").innerHTML =
-    seconds < 10 ? `0${seconds}` : seconds;
-
+  seconds < 10 ? `0${seconds}` : seconds;
+  
   if (dateDiff < 0) {
     clearInterval(counter);
     eventImage.remove();
@@ -77,18 +86,4 @@ let counter = setInterval(() => {
   }
 }, 1000);
 
-// Creat Top Scroll
-// let el = document.documentElement.scrollHeight
-let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
-// console.log(document.documentElement.scrollHeight)
-// console.log(document.documentElement.clientHeight)
-// console.log(height)
-
-window.addEventListener("scroll", () => {
-  const a = document.documentElement.scrollTop
-  topScroll.style.width = `${(a / height) * 100}%`
-  if (innerWidth < 768) {
-    topScroll.style.width = `${(a / height) * 100}%`
-  }
-});

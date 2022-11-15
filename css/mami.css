@@ -21,23 +21,18 @@ body {
   font-family: "Cairo", sans-serif;
   /* direction: rtl; */
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 15px;
 }
 ::-webkit-scrollbar-track {
-  /* box-shadow: 0 1px 0 1px #DDD inset; */
   background-color: #ececec;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
-  /* border-radius: 5px; */
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-color-alt);
-}
-::-webkit-scrollbar-corner {
-  background-color: palegoldenrod;
-}
+} */
 ul {
   list-style: none;
   padding: 0;
@@ -109,6 +104,11 @@ a {
   height: 4px;
   z-index: 9999;
 }
+@media (max-width: 992px) {
+  .top-scroll {
+    display: none;
+  }
+}
 .scroll-to-top {
   position: fixed;
   background-color: #181c23;
@@ -158,6 +158,11 @@ a {
   -moz-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
   z-index: 9999;
+}
+@media (max-width: 767px) {
+  .header {
+    position: relative;
+  }
 }
 .header .container {
   display: flex;
