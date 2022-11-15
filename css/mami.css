@@ -454,6 +454,7 @@ a {
   color: white;
   border: 2px solid white;
   transition-delay: 0.5s;
+  user-select: none;
 }
 .main-title::before {
   content: "";
@@ -534,6 +535,7 @@ a {
 .articles .box:hover {
   transform: translateY(-10px);
   box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+  cursor: pointer;
 }
 .articles .box img {
   max-width: 100%;
